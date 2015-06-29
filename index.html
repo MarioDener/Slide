@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu</title>
+	<style>
+	#tabla{
+		position: relative;
+	}
+	</style>
+</head>
+<body>
+	<a href="#" class="option">Abajo</a>
+	<a href="#" class="option">Arriba</a>
+	<nav id="tabla">
+		<ul>
+			<li><a href="">Link 1</a></li>
+			<li><a href="">Link 2</a></li>
+			<li><a href="">Link 3</a></li>
+			<li><a href="">Link 4</a></li>
+			<li><a href="">Link 5</a></li>
+			<li><a href="">Link 6</a></li>
+			<li><a href="">Link 7</a></li>
+			<li><a href="">Link 8</a></li>
+			<li><a href="">Link 9</a></li>
+			<li><a href="">Link 10</a></li>
+		</ul>
+	</nav>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+	<script>
+		var elementoDiv = document.getElementById('tabla');
+		function moverArriba() {
+		elementoDiv.style.top = elementoDiv.offsetTop - 10 + "px";;
+		}
+		function moverAbajo() {
+		elementoDiv.style.top = elementoDiv.offsetTop + 10 + "px";;
+		}
+		function moverDerecha() {
+		elementoDiv.style.left = elementoDiv.offsetLeft + 10;
+		}
+		function moverIzquierda() {
+		elementoDiv.style.left = elementoDiv.offsetLeft - 10;
+		}
+		$(function(){
+			$('.option').click(function(event){
+				event.preventDefault();
+				moverAbajo();
+			});
+		});
+	</script>
+</body>
+</html>
